@@ -6,6 +6,7 @@
 <title>Book a PC - Ranjeet Cyber Cafe</title>
 
 <script src="https://cdn.tailwindcss.com"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 <style>
 
@@ -181,7 +182,12 @@ const pc=document.getElementById("pc").value;
 const time=document.getElementById("time").value;
 
 if(name==="" || pc==="" || time===""){
-alert("Please fill Name, PC and Time.");
+Swal.fire({
+icon: 'warning',
+title: 'Missing Information',
+text: 'Please fill Name, PC and Time.',
+confirmButtonColor: '#3b82f6'
+});
 return;
 }
 
@@ -213,4 +219,5 @@ window.location.href="index.html";
 
 </body>
   </html>
+
 
