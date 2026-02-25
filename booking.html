@@ -7,6 +7,96 @@
 
 <script src="https://cdn.tailwindcss.com"></script>
 
+<style>
+
+.popup-overlay{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.7);
+display:flex;
+align-items:center;
+justify-content:center;
+visibility:hidden;
+opacity:0;
+transition:.4s;
+z-index:999;
+}
+
+.popup-overlay.active{
+visibility:visible;
+opacity:1;
+}
+
+.popup-card{
+background:#0f172a;
+color:white;
+padding:35px;
+border-radius:20px;
+text-align:center;
+width:340px;
+transform:scale(.7);
+opacity:0;
+animation:popup .4s forwards;
+}
+
+@keyframes popup{
+to{
+transform:scale(1);
+opacity:1;
+}
+}
+
+.checkmark-wrapper{
+width:80px;
+height:80px;
+border-radius:50%;
+background:#22c55e;
+display:flex;
+align-items:center;
+justify-content:center;
+margin:0 auto 20px;
+}
+
+.checkmark{
+width:25px;
+height:50px;
+border-right:5px solid white;
+border-bottom:5px solid white;
+transform:rotate(45deg);
+margin-top:-5px;
+}
+
+.info{
+margin:6px 0;
+color:#cbd5e1;
+}
+
+.booking-id{
+font-weight:bold;
+color:#60a5fa;
+margin:10px 0;
+}
+
+.popup-card button{
+background:#3b82f6;
+border:none;
+padding:12px 20px;
+border-radius:8px;
+color:white;
+font-size:16px;
+cursor:pointer;
+width:100%;
+margin-top:10px;
+}
+
+.popup-card button:hover{
+background:#2563eb;
+}
+
+</style>
 </head>
 
 <body class="bg-black text-white min-h-screen flex items-center justify-center">
@@ -17,29 +107,109 @@
 
 <form class="space-y-4">
 
-<input type="text" placeholder="Your Name" class="w-full p-3 rounded bg-black border border-gray-700">
+<input id="name" type="text" placeholder="Your Name"
+class="w-full p-3 rounded bg-black border border-gray-700">
 
-<select class="w-full p-3 rounded bg-black border border-gray-700">
-<option>Select PC</option>
+<select id="pc" class="w-full p-3 rounded bg-black border border-gray-700">
+<option value="">Select PC</option>
 <option>PC 1</option>
 <option>PC 2</option>
 <option>PC 3</option>
 <option>Gaming PC</option>
 </select>
 
-<input type="time" class="w-full p-3 rounded bg-black border border-gray-700">
+<input id="time" type="time"
+class="w-full p-3 rounded bg-black border border-gray-700">
 
-<button class="w-full bg-blue-500 hover:bg-blue-600 p-3 rounded font-bold">
+<button type="button"
+onclick="confirmBooking()"
+class="bg-blue-500 hover:bg-blue-600 w-full py-3 rounded-lg text-lg">
 Confirm Booking
 </button>
 
 </form>
 
-<a href="index.html" class="block text-center mt-6 text-blue-400 hover:underline">
+<a href="index.html"
+class="block text-center mt-6 text-blue-400 hover:underline">
 ← Back to Home
 </a>
 
 </div>
 
+
+<!-- POPUP -->
+
+<div id="successPopup" class="popup-overlay">
+
+<div class="popup-card">
+
+<div class="checkmark-wrapper">
+<div class="checkmark"></div>
+</div>
+
+<h2 class="text-2xl mb-2">Booking Confirmed</h2>
+
+<p class="booking-id">
+Booking No: <span id="bookingID"></span>
+</p>
+
+<p class="info">Name: <span id="userName"></span></p>
+<p class="info">PC: <span id="pcName"></span></p>
+<p class="info">Time: <span id="bookingTime"></span></p>
+
+<p class="info text-yellow-400 mt-3">
+Please take a screenshot of this booking confirmation.
+</p>
+
+<p class="info">
+Show this at RCC counter when you arrive.
+</p>
+
+<button onclick="goHome()">Go to Home</button>
+
+</div>
+
+</div>
+
+
+<script>
+
+function confirmBooking(){
+
+const name=document.getElementById("name").value.trim();
+const pc=document.getElementById("pc").value;
+const time=document.getElementById("time").value;
+
+if(name==="" || pc==="" || time===""){
+alert("Please fill Name, PC and Time.");
+return;
+}
+
+const now=new Date();
+const sec=String(now.getSeconds()).padStart(2,'0');
+const hr=String(now.getHours()).padStart(2,'0');
+
+const bookingNo="SSHH-"+sec+hr;
+
+document.getElementById("bookingID").innerText=bookingNo;
+document.getElementById("userName").innerText=name;
+document.getElementById("pcName").innerText=pc;
+document.getElementById("bookingTime").innerText=time;
+
+const popup=document.getElementById("successPopup");
+popup.classList.add("active");
+
+setTimeout(()=>{
+popup.classList.remove("active");
+},5000);
+
+}
+
+function goHome(){
+window.location.href="index.html";
+}
+
+</script>
+
 </body>
-</html>
+  </html>
