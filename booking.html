@@ -189,7 +189,7 @@ const now=new Date();
 const sec=String(now.getSeconds()).padStart(2,'0');
 const hr=String(now.getHours()).padStart(2,'0');
 
-const bookingNo="SSHH-"+sec+hr;
+const bookingNo="-"+sec+hr;
 
 document.getElementById("bookingID").innerText=bookingNo;
 document.getElementById("userName").innerText=name;
@@ -213,3 +213,4 @@ window.location.href="index.html";
 
 </body>
   </html>
+
