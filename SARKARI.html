@@ -18,7 +18,7 @@ background:#020617;
 color:white;
 }
 
-/* card glow */
+/* card */
 .card{
 background:#0f172a;
 border:1px solid #1e293b;
@@ -33,11 +33,12 @@ box-shadow:0 10px 30px rgba(0,255,255,0.15);
 /* links */
 .joblink{
 display:block;
-padding:8px 0;
+padding:10px 0;
 border-bottom:1px solid #1e293b;
 cursor:pointer;
 transition:.25s;
 color:#cbd5e1;
+font-size:15px;
 }
 
 .joblink:hover{
@@ -53,40 +54,63 @@ box-shadow:0 10px 40px rgba(0,0,0,0.9);
 }
 
 </style>
-
 </head>
 
 <body class="min-h-screen">
 
 <!-- NAVBAR -->
 
-<nav class="flex items-center justify-between px-6 md:px-16 py-6 border-b border-gray-800">
+<nav class="flex items-center justify-between px-6 md:px-16 py-5 border-b border-gray-800">
 
-<a href="index.html" class="text-xl font-bold">RANJEET CYBER CAFE</a>
+<a href="#" class="text-lg md:text-xl font-bold">
+RANJEET CYBER CAFE
+</a>
+
+<!-- desktop menu -->
 
 <div class="hidden md:flex gap-8 text-sm text-gray-400">
 
-<a href="index.html" class="hover:text-cyan-400">Home</a>
-<a href="services.html" class="hover:text-cyan-400">Services</a>
-<a href="SARKARI.html" class="text-white font-semibold">Latest Jobs</a>
-<a href="print-scan.html" class="hover:text-cyan-400">Print/Scan</a>
-<a href="pricing.html" class="hover:text-cyan-400">Pricing</a>
-<a href="booking.html" class="hover:text-cyan-400">Book PC</a>
-<a href="contact.html" class="hover:text-cyan-400">Contact</a>
+<a href="#" class="hover:text-cyan-400">Home</a>
+<a href="#" class="hover:text-cyan-400">Services</a>
+<a href="#" class="text-white font-semibold">Latest Jobs</a>
+<a href="#" class="hover:text-cyan-400">Print/Scan</a>
+<a href="#" class="hover:text-cyan-400">Pricing</a>
+<a href="#" class="hover:text-cyan-400">Book PC</a>
+<a href="#" class="hover:text-cyan-400">Contact</a>
 
 </div>
 
+<!-- mobile button -->
+
+<button onclick="toggleMenu()" class="md:hidden text-gray-300 text-2xl">
+☰
+</button>
+
 </nav>
+
+<!-- MOBILE MENU -->
+
+<div id="mobileMenu" class="hidden md:hidden px-6 py-4 border-b border-gray-800 space-y-3 text-gray-300">
+
+<a href="#" class="block">Home</a>
+<a href="#" class="block">Services</a>
+<a href="#" class="block">Latest Jobs</a>
+<a href="#" class="block">Print / Scan</a>
+<a href="#" class="block">Pricing</a>
+<a href="#" class="block">Book PC</a>
+<a href="#" class="block">Contact</a>
+
+</div>
 
 <!-- TITLE -->
 
-<section class="text-center py-20 px-6">
+<section class="text-center py-16 md:py-20 px-6">
 
-<h1 class="text-5xl md:text-6xl font-black mb-4">
+<h1 class="text-4xl md:text-6xl font-black mb-4">
 Sarkari Updates
 </h1>
 
-<p class="text-gray-400 text-lg">
+<p class="text-gray-400 text-base md:text-lg">
 Jobs • Results • Admit Cards • Admissions
 </p>
 
@@ -94,16 +118,14 @@ Jobs • Results • Admit Cards • Admissions
 
 <!-- CONTENT -->
 
-<section class="max-w-7xl mx-auto px-6 pb-24">
+<section class="max-w-7xl mx-auto px-5 md:px-6 pb-24">
 
-<div class="grid md:grid-cols-3 gap-8">
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
 
 <!-- Latest Jobs -->
 
 <div class="card rounded-2xl p-6">
-<h3 class="text-2xl font-bold mb-4 text-green-400">
-Latest Jobs
-</h3>
+<h3 class="text-xl md:text-2xl font-bold mb-4 text-green-400">Latest Jobs</h3>
 
 <div onclick="openPopup()" class="joblink">SSC CHSL Online Form</div>
 <div onclick="openPopup()" class="joblink">Railway NTPC Recruitment</div>
@@ -116,9 +138,7 @@ Latest Jobs
 <!-- Results -->
 
 <div class="card rounded-2xl p-6">
-<h3 class="text-2xl font-bold mb-4 text-blue-400">
-Results
-</h3>
+<h3 class="text-xl md:text-2xl font-bold mb-4 text-blue-400">Results</h3>
 
 <div onclick="openPopup()" class="joblink">SSC CGL Result</div>
 <div onclick="openPopup()" class="joblink">Railway Group D Result</div>
@@ -131,9 +151,7 @@ Results
 <!-- Admit Card -->
 
 <div class="card rounded-2xl p-6">
-<h3 class="text-2xl font-bold mb-4 text-purple-400">
-Admit Card
-</h3>
+<h3 class="text-xl md:text-2xl font-bold mb-4 text-purple-400">Admit Card</h3>
 
 <div onclick="openPopup()" class="joblink">SSC GD Admit Card</div>
 <div onclick="openPopup()" class="joblink">CTET Admit Card</div>
@@ -146,9 +164,7 @@ Admit Card
 <!-- Answer Key -->
 
 <div class="card rounded-2xl p-6">
-<h3 class="text-2xl font-bold mb-4 text-red-400">
-Answer Key
-</h3>
+<h3 class="text-xl md:text-2xl font-bold mb-4 text-red-400">Answer Key</h3>
 
 <div onclick="openPopup()" class="joblink">SSC CHSL Answer Key</div>
 <div onclick="openPopup()" class="joblink">Railway NTPC Answer Key</div>
@@ -160,9 +176,7 @@ Answer Key
 <!-- Admissions -->
 
 <div class="card rounded-2xl p-6">
-<h3 class="text-2xl font-bold mb-4 text-yellow-400">
-Admissions
-</h3>
+<h3 class="text-xl md:text-2xl font-bold mb-4 text-yellow-400">Admissions</h3>
 
 <div onclick="openPopup()" class="joblink">CUET Admission</div>
 <div onclick="openPopup()" class="joblink">NEET Admission</div>
@@ -174,21 +188,13 @@ Admissions
 <!-- Important Links -->
 
 <div class="card rounded-2xl p-6">
-<h3 class="text-2xl font-bold mb-4 text-pink-400">
-Important Links
-</h3>
-<div 
-<a href="https://ssc.gov.in/" class="hover:text-cyan-400">SSC Official Website</a>
-</div>
-<div 
-<a href="https://upsconline.nic.in/" class="hover:text-cyan-400">UPSC Official Website</a>
-</div>
-<div 
-<a href="https://www.ibps.in/" class="text-white font-semibold">IBPS Official Website</a>
-</div>
-<div 
-<a href="https://www.rrbapply.gov.in/#/auth/landing" class="hover:text-cyan-400">Railway Recruitment</a>
-</div>
+<h3 class="text-xl md:text-2xl font-bold mb-4 text-pink-400">Important Links</h3>
+
+<a href="https://ssc.gov.in/" target="_blank" class="joblink">SSC Official Website</a>
+<a href="https://upsconline.nic.in/" target="_blank" class="joblink">UPSC Official Website</a>
+<a href="https://www.ibps.in/" target="_blank" class="joblink">IBPS Official Website</a>
+<a href="https://www.rrbapply.gov.in/#/auth/landing" target="_blank" class="joblink">Railway Recruitment</a>
+
 </div>
 
 </div>
@@ -196,11 +202,11 @@ Important Links
 
 <!-- POPUP -->
 
-<div id="popup" class="hidden fixed inset-0 bg-black/80 flex items-center justify-center">
+<div id="popup" class="hidden fixed inset-0 bg-black/80 flex items-center justify-center px-4">
 
-<div class="popupbox rounded-2xl p-8 max-w-sm text-center">
+<div class="popupbox rounded-2xl p-6 md:p-8 max-w-sm w-full text-center">
 
-<h2 class="text-2xl font-bold mb-2 text-cyan-400">
+<h2 class="text-xl md:text-2xl font-bold mb-2 text-cyan-400">
 Ranjeet Cyber Cafe
 </h2>
 
@@ -236,10 +242,11 @@ function closePopup(){
 document.getElementById("popup").classList.add("hidden");
 }
 
+function toggleMenu(){
+document.getElementById("mobileMenu").classList.toggle("hidden");
+}
+
 </script>
 
 </body>
-</html>
-
-
-
+  </html>
