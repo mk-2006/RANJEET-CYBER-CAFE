@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ranjeet Cyber Cafe - Sarkari Updates</title>
+
+<script src="https://cdn.tailwindcss.com"></script>
+
+<style>
+
+body{
+background:#0f172a;
+font-family:Arial, sans-serif;
+}
+
+.joblink{
+display:block;
+padding:6px 0;
+border-bottom:1px solid #1f2937;
+cursor:pointer;
+}
+
+.joblink:hover{
+color:#facc15;
+}
+
+</style>
+</head>
+
+<body class="text-white">
+
+<!-- HEADER -->
+<header class="bg-black py-5">
+<div class="max-w-7xl mx-auto px-4 flex justify-between items-center">
+
+<h1 class="text-2xl font-bold text-yellow-400">
+RANJEET CYBER CAFE
+</h1>
+
+</div>
+</header>
+
+
+<!-- TITLE -->
+<section class="text-center py-8">
+<h2 class="text-4xl font-bold text-yellow-400">
+Sarkari Exam Updates
+</h2>
+<p class="text-gray-400">
+Jobs • Results • Admit Cards • Admissions
+</p>
+</section>
+
+
+<!-- MAIN GRID -->
+<section class="max-w-7xl mx-auto px-4 pb-16">
+
+<div class="grid md:grid-cols-3 gap-6">
+
+<!-- Latest Jobs -->
+<div class="bg-gray-900 rounded-xl p-5">
+
+<h3 class="text-green-400 text-xl font-bold mb-4">
+Latest Jobs
+</h3>
+
+<div onclick="openPopup()" class="joblink">SSC CHSL Online Form</div>
+<div onclick="openPopup()" class="joblink">Railway NTPC Recruitment</div>
+<div onclick="openPopup()" class="joblink">UPSC Civil Services</div>
+<div onclick="openPopup()" class="joblink">IBPS PO Recruitment</div>
+<div onclick="openPopup()" class="joblink">India Post GDS</div>
+
+</div>
+
+
+<!-- Results -->
+<div class="bg-gray-900 rounded-xl p-5">
+
+<h3 class="text-blue-400 text-xl font-bold mb-4">
+Results
+</h3>
+
+<div onclick="openPopup()" class="joblink">SSC CGL Result</div>
+<div onclick="openPopup()" class="joblink">Railway Group D Result</div>
+<div onclick="openPopup()" class="joblink">IBPS Clerk Result</div>
+<div onclick="openPopup()" class="joblink">UP Police Result</div>
+<div onclick="openPopup()" class="joblink">NDA Result</div>
+
+</div>
+
+
+<!-- Admit Card -->
+<div class="bg-gray-900 rounded-xl p-5">
+
+<h3 class="text-purple-400 text-xl font-bold mb-4">
+Admit Card
+</h3>
+
+<div onclick="openPopup()" class="joblink">SSC GD Admit Card</div>
+<div onclick="openPopup()" class="joblink">CTET Admit Card</div>
+<div onclick="openPopup()" class="joblink">UP Police Admit Card</div>
+<div onclick="openPopup()" class="joblink">Railway Admit Card</div>
+<div onclick="openPopup()" class="joblink">Bank PO Admit Card</div>
+
+</div>
+
+
+<!-- Answer Key -->
+<div class="bg-gray-900 rounded-xl p-5">
+
+<h3 class="text-red-400 text-xl font-bold mb-4">
+Answer Key
+</h3>
+
+<div onclick="openPopup()" class="joblink">SSC CHSL Answer Key</div>
+<div onclick="openPopup()" class="joblink">Railway NTPC Answer Key</div>
+<div onclick="openPopup()" class="joblink">CTET Answer Key</div>
+<div onclick="openPopup()" class="joblink">UP Police Answer Key</div>
+
+</div>
+
+
+<!-- Admissions -->
+<div class="bg-gray-900 rounded-xl p-5">
+
+<h3 class="text-yellow-400 text-xl font-bold mb-4">
+Admissions
+</h3>
+
+<div onclick="openPopup()" class="joblink">CUET Admission</div>
+<div onclick="openPopup()" class="joblink">NEET Admission</div>
+<div onclick="openPopup()" class="joblink">JEE Main Admission</div>
+<div onclick="openPopup()" class="joblink">IGNOU Admission</div>
+
+</div>
+
+
+<!-- Important Links -->
+<div class="bg-gray-900 rounded-xl p-5">
+
+<h3 class="text-pink-400 text-xl font-bold mb-4">
+Important Links
+</h3>
+
+<div onclick="openPopup()" class="joblink">UPSC Official Website</div>
+<div onclick="openPopup()" class="joblink">SSC Official Website</div>
+<div onclick="openPopup()" class="joblink">IBPS Official Website</div>
+<div onclick="openPopup()" class="joblink">Railway Recruitment</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- POPUP -->
+<div id="popup" class="hidden fixed inset-0 bg-black/70 flex items-center justify-center">
+
+<div class="bg-white text-black rounded-xl p-8 max-w-sm text-center shadow-2xl">
+
+<h2 class="text-2xl font-bold mb-2">
+Ranjeet Cyber Cafe
+</h2>
+
+<p class="mb-4">
+Visit our cafe to know full details about this job / result.
+</p>
+
+<p class="text-sm text-gray-600 mb-4">
+Services Available:<br>
+Online Forms • Admit Card • Results • Fast Internet
+</p>
+
+<button onclick="closePopup()" class="bg-purple-600 text-white px-5 py-2 rounded">
+OK
+</button>
+
+</div>
+
+</div>
+
+
+<!-- SCRIPT -->
+<script>
+
+function openPopup(){
+document.getElementById("popup").classList.remove("hidden");
+}
+
+function closePopup(){
+document.getElementById("popup").classList.add("hidden");
+}
+
+</script>
+
+</body>
+</html>
