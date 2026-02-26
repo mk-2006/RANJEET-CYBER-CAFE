@@ -326,50 +326,9 @@ btn.innerHTML="☰";
 </script>
 </body>
 
-</draw() {      ctx.fillStyle = `rgba(139, 92, 246, ${this.life})`; 
-                ctx.beginPath();
-                ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
-                ctx.fill();
-            }
-        }
-
-        function animate() {
-            ctx.clearRect(0, 0, canvas.width, canvas.height);
-            for (let i = 0; i < particles.length; i++) {
-                particles[i].update();
-                particles[i].draw();
-
-                for (let j = i; j < particles.length; j++) {
-                    const dx = particles[i].x - particles[j].x;
-                    const dy = particles[i].y - particles[j].y;
-                    const dist = Math.sqrt(dx * dx + dy * dy);
-
-                    if (dist < 100) {
-                        ctx.strokeStyle = `rgba(100, 100, 255, ${particles[i].life * 0.15})`;
-                        ctx.lineWidth = 0.5;
-                        ctx.beginPath();
-                        ctx.moveTo(particles[i].x, particles[i].y);
-                        ctx.lineTo(particles[j].x, particles[j].y);
-                        ctx.stroke();
-                    }
-                }
-                if (particles[i].life <= 0) {
-                    particles.splice(i, 1);
-                    i--;
-                }
-            }
-            requestAnimationFrame(animate);
-        }
-
-        animate();
-        window.addEventListener('resize', () => {
-            canvas.width = window.innerWidth;
-            canvas.height = window.innerHeight;
-        });
-    </script>
-</body>
 
 </html>
+
 
 
 
