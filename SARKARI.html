@@ -3,24 +3,41 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Ranjeet Cyber Cafe - Sarkari Updates</title>
 
 <script src="https://cdn.tailwindcss.com"></script>
 
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+
 <style>
 
 body{
-background: linear-gradient(135deg,#020617,#0f172a,#020617);
-font-family:Arial, sans-serif;
+font-family:'Inter',sans-serif;
+background:#020617;
+color:white;
+}
+
+/* card glow */
+.card{
+background:#0f172a;
+border:1px solid #1e293b;
+transition:.3s;
+}
+
+.card:hover{
+transform:translateY(-6px);
+box-shadow:0 10px 30px rgba(0,255,255,0.15);
 }
 
 /* links */
 .joblink{
 display:block;
-padding:6px 0;
-border-bottom:1px solid #334155;
+padding:8px 0;
+border-bottom:1px solid #1e293b;
 cursor:pointer;
-transition:0.3s;
+transition:.25s;
+color:#cbd5e1;
 }
 
 .joblink:hover{
@@ -28,61 +45,65 @@ color:#22c55e;
 padding-left:6px;
 }
 
-/* cards */
-.card{
-background:rgba(15,23,42,0.85);
-border:1px solid #1e293b;
-box-shadow:0 0 15px rgba(0,0,0,0.6);
-}
-
-/* popup theme */
+/* popup */
 .popupbox{
 background:#020617;
-color:white;
 border:1px solid #334155;
-box-shadow:0 0 25px rgba(0,0,0,0.8);
+box-shadow:0 10px 40px rgba(0,0,0,0.9);
 }
 
 </style>
+
 </head>
 
-<body class="text-gray-200">
+<body class="min-h-screen">
 
-<nav class="flex items-center justify-between px-6 md:px-12 py-8 border-b border-slate-700">
+<!-- NAVBAR -->
 
-<a href="index.html" class="text-xl font-bold text-cyan-400">
+<nav class="flex items-center justify-between px-6 md:px-16 py-6 border-b border-gray-800">
+
+<h1 class="text-xl font-bold tracking-wide text-cyan-400">
 RANJEET CYBER CAFE
-</a>
+</h1>
 
-<div class="flex gap-8 text-sm text-gray-400">
+<div class="hidden md:flex gap-8 text-sm text-gray-400">
+
 <a href="index.html" class="hover:text-cyan-400">Home</a>
 <a href="services.html" class="hover:text-cyan-400">Services</a>
-<a href="SARKARI.html" class="text-white">Latest Jobs</a>
-<a href="print-scan.html" class="hover:text-cyan-400 transition">Print/Scan</a>
+<a href="SARKARI.html" class="text-white font-semibold">Latest Jobs</a>
+<a href="print-scan.html" class="hover:text-cyan-400">Print/Scan</a>
 <a href="pricing.html" class="hover:text-cyan-400">Pricing</a>
 <a href="booking.html" class="hover:text-cyan-400">Book PC</a>
 <a href="contact.html" class="hover:text-cyan-400">Contact</a>
+
 </div>
 
 </nav>
 
+<!-- TITLE -->
 
-<section class="text-center py-8">
-<h2 class="text-4xl font-bold text-cyan-400">
-Sarkari Exam Updates
-</h2>
-<p class="text-gray-400">
+<section class="text-center py-20 px-6">
+
+<h1 class="text-5xl md:text-6xl font-black mb-4">
+Sarkari Updates
+</h1>
+
+<p class="text-gray-400 text-lg">
 Jobs • Results • Admit Cards • Admissions
 </p>
+
 </section>
 
+<!-- CONTENT -->
 
-<section class="max-w-7xl mx-auto px-4 pb-16">
+<section class="max-w-7xl mx-auto px-6 pb-24">
 
-<div class="grid md:grid-cols-3 gap-6">
+<div class="grid md:grid-cols-3 gap-8">
 
-<div class="card rounded-xl p-5">
-<h3 class="text-green-400 text-xl font-bold mb-4">
+<!-- Latest Jobs -->
+
+<div class="card rounded-2xl p-6">
+<h3 class="text-2xl font-bold mb-4 text-green-400">
 Latest Jobs
 </h3>
 
@@ -91,11 +112,13 @@ Latest Jobs
 <div onclick="openPopup()" class="joblink">UPSC Civil Services</div>
 <div onclick="openPopup()" class="joblink">IBPS PO Recruitment</div>
 <div onclick="openPopup()" class="joblink">India Post GDS</div>
+
 </div>
 
+<!-- Results -->
 
-<div class="card rounded-xl p-5">
-<h3 class="text-blue-400 text-xl font-bold mb-4">
+<div class="card rounded-2xl p-6">
+<h3 class="text-2xl font-bold mb-4 text-blue-400">
 Results
 </h3>
 
@@ -104,11 +127,13 @@ Results
 <div onclick="openPopup()" class="joblink">IBPS Clerk Result</div>
 <div onclick="openPopup()" class="joblink">UP Police Result</div>
 <div onclick="openPopup()" class="joblink">NDA Result</div>
+
 </div>
 
+<!-- Admit Card -->
 
-<div class="card rounded-xl p-5">
-<h3 class="text-purple-400 text-xl font-bold mb-4">
+<div class="card rounded-2xl p-6">
+<h3 class="text-2xl font-bold mb-4 text-purple-400">
 Admit Card
 </h3>
 
@@ -117,11 +142,13 @@ Admit Card
 <div onclick="openPopup()" class="joblink">UP Police Admit Card</div>
 <div onclick="openPopup()" class="joblink">Railway Admit Card</div>
 <div onclick="openPopup()" class="joblink">Bank PO Admit Card</div>
+
 </div>
 
+<!-- Answer Key -->
 
-<div class="card rounded-xl p-5">
-<h3 class="text-red-400 text-xl font-bold mb-4">
+<div class="card rounded-2xl p-6">
+<h3 class="text-2xl font-bold mb-4 text-red-400">
 Answer Key
 </h3>
 
@@ -129,11 +156,13 @@ Answer Key
 <div onclick="openPopup()" class="joblink">Railway NTPC Answer Key</div>
 <div onclick="openPopup()" class="joblink">CTET Answer Key</div>
 <div onclick="openPopup()" class="joblink">UP Police Answer Key</div>
+
 </div>
 
+<!-- Admissions -->
 
-<div class="card rounded-xl p-5">
-<h3 class="text-yellow-400 text-xl font-bold mb-4">
+<div class="card rounded-2xl p-6">
+<h3 class="text-2xl font-bold mb-4 text-yellow-400">
 Admissions
 </h3>
 
@@ -141,11 +170,13 @@ Admissions
 <div onclick="openPopup()" class="joblink">NEET Admission</div>
 <div onclick="openPopup()" class="joblink">JEE Main Admission</div>
 <div onclick="openPopup()" class="joblink">IGNOU Admission</div>
+
 </div>
 
+<!-- Important Links -->
 
-<div class="card rounded-xl p-5">
-<h3 class="text-pink-400 text-xl font-bold mb-4">
+<div class="card rounded-2xl p-6">
+<h3 class="text-2xl font-bold mb-4 text-pink-400">
 Important Links
 </h3>
 
@@ -153,15 +184,17 @@ Important Links
 <div onclick="openPopup()" class="joblink">SSC Official Website</div>
 <div onclick="openPopup()" class="joblink">IBPS Official Website</div>
 <div onclick="openPopup()" class="joblink">Railway Recruitment</div>
+
 </div>
 
 </div>
 </section>
 
+<!-- POPUP -->
 
 <div id="popup" class="hidden fixed inset-0 bg-black/80 flex items-center justify-center">
 
-<div class="popupbox rounded-xl p-8 max-w-sm text-center">
+<div class="popupbox rounded-2xl p-8 max-w-sm text-center">
 
 <h2 class="text-2xl font-bold mb-2 text-cyan-400">
 Ranjeet Cyber Cafe
@@ -171,12 +204,11 @@ Ranjeet Cyber Cafe
 Visit our cafe to know full details about this job / result.
 </p>
 
-<p class="text-sm text-gray-400 mb-4">
-Services Available:<br>
+<p class="text-sm text-gray-400 mb-6">
 Online Forms • Admit Card • Results • Fast Internet
 </p>
 
-<button onclick="closePopup()" class="bg-cyan-500 hover:bg-cyan-600 text-black px-5 py-2 rounded">
+<button onclick="closePopup()" class="bg-cyan-400 hover:bg-cyan-300 text-black px-6 py-2 rounded-lg font-bold">
 OK
 </button>
 
@@ -184,6 +216,11 @@ OK
 
 </div>
 
+<!-- FOOTER -->
+
+<footer class="border-t border-gray-800 text-center py-8 text-gray-500 text-sm">
+© 2026 Ranjeet Cyber Cafe
+</footer>
 
 <script>
 
@@ -199,4 +236,3 @@ document.getElementById("popup").classList.add("hidden");
 
 </body>
 </html>
-
