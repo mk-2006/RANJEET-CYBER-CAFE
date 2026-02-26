@@ -20,22 +20,57 @@ color:#fff;
 
 <body class="min-h-screen">
 
-<!-- Navbar -->
+<!-- NAVBAR -->
 
-<nav class="flex items-center justify-between px-6 md:px-12 py-8 border-b border-gray-800">
+<nav class="flex items-center justify-between px-6 md:px-16 py-5 border-b border-gray-800">
 
-<a href="index.html" class="text-xl font-bold">RANJEET CYBER CAFE</a>
+<a href="index.html" class="text-xl font-bold">
+RANJEET CYBER CAFE
+</a>
 
-<div class="flex gap-8 text-sm text-gray-400">
-<a href="index.html" class="hover:text-white">Home</a>
-<a href="services.html" class="text-white">Services</a>
-<a href="SARKARI.html" class="hover:text-white">Latest Jobs</a>
+<!-- Desktop Menu -->
+
+<div class="hidden md:flex items-center gap-8 text-[10px] font-bold uppercase tracking-widest text-gray-400">
+<a href="services.html" class="hover:text-white transition">Services</a>
+<a href="SARKARI.html" class="text-white font-semibold">Latest Jobs</a>
 <a href="print-scan.html" class="hover:text-white transition">Print/Scan</a>
-<a href="pricing.html" class="hover:text-white">Pricing</a>
-<a href="booking.html" class="hover:text-white">Book PC</a>
-<a href="contact.html" class="hover:text-white">Contact</a></div>
+<a href="pricing.html" class="hover:text-white transition">Pricing</a>
+<a href="contact.html" class="hover:text-white transition">Contact</a>
+</div>
+
+<div class="flex items-center gap-6">
+
+<a href="login.html" class="hidden md:inline-block bg-[#5851FF] hover:bg-indigo-500 px-8 py-2.5 rounded-full text-[10px] font-black transition text-center text-white">
+MEMBER LOGIN
+</a>
+
+<!-- MOBILE BUTTON -->
+
+<button onclick="toggleMenu()" id="menuBtn" class="md:hidden text-gray-300 text-2xl transition">
+☰
+</button>
+
+</div>
 
 </nav>
+
+<!-- MOBILE MENU -->
+
+<div id="mobileMenu"
+class="md:hidden max-h-0 overflow-hidden opacity-0 transition-all duration-500 px-6 border-b border-gray-800 text-gray-300">
+
+<div class="py-4 space-y-3">
+
+<a href="index.html" class="hover:text-white transition">Home</a>
+<a href="services.html" class="text-white font-semibold">Services</a>
+<a href="SARKARI.html" class="hover:text-white">Latest Jobs</a>
+<a href="print-scan.html" class="hover:text-white">Print / Scan</a>
+<a href="pricing.html" class="hover:text-white">Pricing</a>
+<a href="booking.html" class="hover:text-white">Book PC</a>
+<a href="contact.html" class="hover:text-white">Contact</a>
+
+</div>
+</div>
 
 <!-- Header -->
 
@@ -114,4 +149,5 @@ Enjoy PC gaming with high performance computers.
 </body>
 
 </html>
+
 
