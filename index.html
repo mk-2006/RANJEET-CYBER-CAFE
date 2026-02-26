@@ -15,62 +15,75 @@
         }
     </style>
 </head>
-    </div>
+<body class="topo-bg min-h-screen flex flex-col">
 
-<!-- mobile button -->
+<canvas id="webCanvas"></canvas>
+<div class="content-layer flex flex-col min-h-screen">
 
-<button onclick="toggleMenu()" class="md:hidden text-gray-300 text-2xl">
+<!-- NAVBAR -->
+
+<nav class="flex items-center justify-between px-6 md:px-12 py-8">
+
+<a href="index.html" class="flex items-center gap-3 hover:opacity-80 transition cursor-pointer">
+<div class="w-8 h-8 bg-white rounded-full flex items-center justify-center">
+<div class="w-4 h-4 bg-black rotate-45"></div>
+</div>
+<span class="font-bold tracking-tighter text-xl leading-tight text-white">
+RANJEET<br>
+<span class="font-light text-[10px] tracking-[0.2em] text-indigo-400">CYBER CAFE</span>
+</span>
+</a>
+
+<!-- Desktop Menu -->
+
+<div class="hidden md:flex items-center gap-8 text-[10px] font-bold uppercase tracking-widest text-gray-400">
+<a href="services.html" class="hover:text-white transition">Services</a>
+<a href="SARKARI.html" class="hover:text-white transition">Latest Jobs</a>
+<a href="print-scan.html" class="hover:text-white transition">Print/Scan</a>
+<a href="pricing.html" class="hover:text-white transition">Pricing</a>
+<a href="contact.html" class="hover:text-white transition">Contact</a>
+</div>
+
+<div class="flex items-center gap-6">
+
+<a href="login.html" class="hidden md:inline-block bg-[#5851FF] hover:bg-indigo-500 px-8 py-2.5 rounded-full text-[10px] font-black transition text-center text-white">
+MEMBER LOGIN
+</a>
+
+<!-- MOBILE BUTTON -->
+
+<button onclick="toggleMenu()" id="menuBtn" class="md:hidden text-gray-300 text-2xl">
 ☰
 </button>
+
+</div>
 
 </nav>
 
 <!-- MOBILE MENU -->
 
-<div id="mobileMenu" class="hidden md:hidden px-6 py-4 border-b border-gray-800 space-y-3 text-gray-300">
+<div id="mobileMenu" class="md:hidden max-h-0 overflow-hidden opacity-0 transition-all duration-500 px-6 border-b border-gray-800 text-gray-300">
 
-<a href="#" class="block">Home</a>
-<a href="#" class="block">Services</a>
-<a href="#" class="block">Latest Jobs</a>
-<a href="#" class="block">Print / Scan</a>
-<a href="#" class="block">Pricing</a>
-<a href="#" class="block">Book PC</a>
-<a href="#" class="block">Contact</a>
+<div class="py-4 space-y-3">
+
+<a href="index.html" class="block hover:text-white">Home</a>
+<a href="services.html" class="block hover:text-white">Services</a>
+<a href="SARKARI.html" class="block hover:text-white">Latest Jobs</a>
+<a href="print-scan.html" class="block hover:text-white">Print / Scan</a>
+<a href="pricing.html" class="block hover:text-white">Pricing</a>
+<a href="booking.html" class="block hover:text-white">Book PC</a>
+<a href="contact.html" class="block hover:text-white">Contact</a>
 
 </div>
-<body class="topo-bg min-h-screen flex flex-col">
 
-    <canvas id="webCanvas"></canvas>
+    </div>
 
-    <div class="content-layer flex flex-col min-h-screen">
+    
+
+
+
+
         
-        <nav class="flex items-center justify-between px-6 md:px-12 py-8">
-            <a href="index.html" class="flex items-center gap-3 hover:opacity-80 transition cursor-pointer">
-                <div class="w-8 h-8 bg-white rounded-full flex items-center justify-center">
-                    <div class="w-4 h-4 bg-black rotate-45"></div>
-                </div>
-                <span class="font-bold tracking-tighter text-xl leading-tight text-white">RANJEET<br><span class="font-light text-[10px] tracking-[0.2em] text-indigo-400">CYBER CAFE</span></span>
-            </a>
-            
-            <div class="hidden md:flex items-center gap-8 text-[10px] font-bold uppercase tracking-widest text-gray-400">
-                <a href="services.html" class="hover:text-white transition">Services</a>
-                <a href="SARKARI.html" class="hover:text-white transition">Latest Jobs</a>
-                <a href="print-scan.html" class="hover:text-white transition">Print/Scan</a>
-                <a href="pricing.html" class="hover:text-white transition">Pricing</a>
-                <a href="contact.html" class="hover:text-white transition">Contact</a>
-            </div>
-
-            <div class="flex items-center gap-6">
-                <a href="login.html" class="hidden md:inline-block bg-[#5851FF] hover:bg-indigo-500 px-8 py-2.5 rounded-full text-[10px] font-black transition text-center text-white">MEMBER LOGIN</a>
-                
-                <div class="space-y-1.5 cursor-pointer group">
-                    <div class="w-6 h-0.5 bg-white group-hover:bg-indigo-400 transition"></div>
-                    <div class="w-6 h-0.5 bg-white group-hover:bg-indigo-400 transition"></div>
-                    <div class="w-6 h-0.5 bg-white group-hover:bg-indigo-400 transition"></div>
-                </div>
-            </div>
-        </nav>
-
         <main class="flex-grow flex flex-col justify-center px-6 md:px-12 py-12 md:py-0">
             <div class="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20 items-center">
                 
@@ -288,6 +301,7 @@ class="w-7 h-7 invert hover:scale-110 transition">
 </body>
 
 </html>
+
 
 
 
