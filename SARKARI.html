@@ -66,39 +66,48 @@ box-shadow:0 10px 40px rgba(0,0,0,0.9);
 RANJEET CYBER CAFE
 </a>
 
-<!-- desktop menu -->
+<!-- Desktop Menu -->
 
-<div class="hidden md:flex gap-8 text-sm text-gray-400">
-
-<a href="#" class="hover:text-cyan-400">Home</a>
-<a href="#" class="hover:text-cyan-400">Services</a>
-<a href="#" class="text-white font-semibold">Latest Jobs</a>
-<a href="#" class="hover:text-cyan-400">Print/Scan</a>
-<a href="#" class="hover:text-cyan-400">Pricing</a>
-<a href="#" class="hover:text-cyan-400">Book PC</a>
-<a href="#" class="hover:text-cyan-400">Contact</a>
-
+<div class="hidden md:flex items-center gap-8 text-[10px] font-bold uppercase tracking-widest text-gray-400">
+<a href="services.html" class="hover:text-white transition">Services</a>
+<a href="SARKARI.html" class="text-white font-semibold">Latest Jobs</a>
+<a href="print-scan.html" class="hover:text-white transition">Print/Scan</a>
+<a href="pricing.html" class="hover:text-white transition">Pricing</a>
+<a href="contact.html" class="hover:text-white transition">Contact</a>
 </div>
 
-<!-- mobile button -->
+<div class="flex items-center gap-6">
 
-<button onclick="toggleMenu()" class="md:hidden text-gray-300 text-2xl">
+<a href="login.html" class="hidden md:inline-block bg-[#5851FF] hover:bg-indigo-500 px-8 py-2.5 rounded-full text-[10px] font-black transition text-center text-white">
+MEMBER LOGIN
+</a>
+
+<!-- MOBILE BUTTON -->
+
+<button onclick="toggleMenu()" id="menuBtn" class="md:hidden text-gray-300 text-2xl transition">
 ☰
 </button>
+
+</div>
 
 </nav>
 
 <!-- MOBILE MENU -->
 
-<div id="mobileMenu" class="hidden md:hidden px-6 py-4 border-b border-gray-800 space-y-3 text-gray-300">
+<div id="mobileMenu"
+class="md:hidden max-h-0 overflow-hidden opacity-0 transition-all duration-500 px-6 border-b border-gray-800 text-gray-300">
 
-<a href="#" class="block">Home</a>
-<a href="#" class="block">Services</a>
-<a href="#" class="block">Latest Jobs</a>
-<a href="#" class="block">Print / Scan</a>
-<a href="#" class="block">Pricing</a>
-<a href="#" class="block">Book PC</a>
-<a href="#" class="block">Contact</a>
+<div class="py-4 space-y-3">
+
+<a href="index.html" class="block hover:text-white">Home</a>
+<a href="services.html" class="block hover:text-white">Services</a>
+<a href="SARKARI.html" class="block hover:text-white">Latest Jobs</a>
+<a href="print-scan.html" class="block hover:text-white">Print / Scan</a>
+<a href="pricing.html" class="block hover:text-white">Pricing</a>
+<a href="booking.html" class="block hover:text-white">Book PC</a>
+<a href="contact.html" class="block hover:text-white">Contact</a>
+
+</div>
 
 </div>
 
@@ -250,3 +259,4 @@ document.getElementById("mobileMenu").classList.toggle("hidden");
 
 </body>
   </html>
+
